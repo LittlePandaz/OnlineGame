@@ -22,19 +22,21 @@ namespace Repo.Repository
         }
         public bool Delete(TKey id)
         {
-            Command command = new Command("");
-
+            Command command = new Command($"DELETE * FROM {TableName} WHERE Id = @Id");
+            command.AddParameter("Id", id);
+            return Connection.ExecuteNonQuery(command) == 1;
         }
 
         public TEntities Get(TKey id)
         {
-            Command command = new Command("");
+            Command command = new Command($"SELECT * FROM {TableName} WHERE Id = @Id");
+            command.AddParameter("Id", id);
             return Connection.ExecuteReader(command, Convert).SingleOrDefault();
         }
 
         public IEnumerable<TEntities> GetAll()
         {
-            Command command = new Command("");
+            Command command = new Command($"SELECT * FROM {TableName}");
             return Connection.ExecuteReader(command, Convert);
         }
 
