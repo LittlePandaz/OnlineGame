@@ -11,10 +11,20 @@ namespace Repo.Repository
 {
     public class PlayerRepository : BaseRepository<int, Player>
     {
-        public PlayerRepository():base("Player")
+        private static PlayerRepository _Instance;
+        public static PlayerRepository Instance
+        {
+            get
+            {
+                return _Instance ?? (_Instance = new PlayerRepository());
+            }
+        }
+
+        private PlayerRepository():base("Player")
         {
 
         }
+
         public override Player Convert(IDataRecord dataRecord)
         {
             return new Player()

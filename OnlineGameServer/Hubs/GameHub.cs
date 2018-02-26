@@ -9,9 +9,9 @@ namespace OnlineGameServer.Hubs
 {
     public class GameHub : Hub
     {
-        public void Pub(Personne message)
+        public void Pub(PlayerModel player)
         {
-            Clients.All.Test(message.Name);
+            Clients.All.Test(player.Nickname);
         }
     }
 }

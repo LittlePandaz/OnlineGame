@@ -10,3 +10,5 @@ OnlineGameServer.v12.suo
 .vs/OnlineGameServer/v15/Server/sqlite3/storage.ide
 OnlineGameServer/obj/Debug/OnlineGameServer.csproj.CoreCompileInputs.cache
 .vs/OnlineGameServer/v15/Server/sqlite3/storage.ide
+
+.vs/*
