@@ -23,6 +23,11 @@ namespace OnlineGameServer.Controllers
             return PlayerRepository.Instance.Get(id).ToClient<PlayerModel, Player>();
         }
 
+        public PlayerModel Get(string nicknameoremail, string password)
+        {
+            return PlayerRepository.Instance.Get(nicknameoremail, password).ToClient<PlayerModel, Player>();
+        }
+
         public int Post([FromBody] PlayerModel player)
         {
             return PlayerRepository.Instance.Insert(player.ToGlobal<PlayerModel, Player>());

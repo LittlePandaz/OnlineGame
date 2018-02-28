@@ -36,6 +36,14 @@ namespace Repo.Repository
             };
         }
 
+        public Player Get(string nicknameoremail, string password)
+        {
+            Command command = new Command($"SELECT * FROM {TableName} WHERE (Nickname = @nicknameoremail OR Email = @nicknameoremail) AND Password = @password");
+            command.AddParameter("nicknameoremail", nicknameoremail);
+            command.AddParameter("password", password);
+            return Connection.ExecuteReader(command, Convert).SingleOrDefault();
+        }
+
         public override int Insert(Player entity)
         {
             Command command = new Command($"INSERT INTO {TableName} (Nickname, Email, Password) OUTPUT INSERTED.Id VALUES(@Nickname, @Email, @Password)");
