@@ -13,25 +13,25 @@ namespace OnlineGameServer.Controllers
     public class PlayerApiController: ApiController
     {
         
-        public IEnumerable<PlayerModel> GET()
+        public IEnumerable<PlayerModel> Get()
         {
            return PlayerRepository.Instance.GetAll().Select(x=>x.ToClient<PlayerModel,Player>());
         }
 
-        public PlayerModel GET(int id)
+        public PlayerModel Get(int id)
         {
             return PlayerRepository.Instance.Get(id).ToClient<PlayerModel, Player>();
         }
 
-        public int POST([FromBody] PlayerModel player)
+        public int Post([FromBody] PlayerModel player)
         {
             return PlayerRepository.Instance.Insert(player.ToGlobal<PlayerModel, Player>());
         }
-        public bool DELETE(int id)
+        public bool Delete(int id)
         {
             return PlayerRepository.Instance.Delete(id);
         }
-        public bool UPDATE([FromBody] PlayerModel player)
+        public bool Put([FromBody] PlayerModel player)
         {
             return PlayerRepository.Instance.Update(player.ToGlobal<PlayerModel, Player>());
         }
