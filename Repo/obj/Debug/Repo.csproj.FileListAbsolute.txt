@@ -5,3 +5,9 @@ C:\Users\forma204\Documents\GitHub\OnlineGame\Repo\obj\Debug\Repo.csprojResolveA
 C:\Users\forma204\Documents\GitHub\OnlineGame\Repo\obj\Debug\Repo.csproj.CoreCompileInputs.cache
 C:\Users\forma204\Documents\GitHub\OnlineGame\Repo\obj\Debug\Repo.dll
 C:\Users\forma204\Documents\GitHub\OnlineGame\Repo\obj\Debug\Repo.pdb
+C:\Users\Gregory\Documents\GitHub\OnlineGame\Repo\bin\Debug\Repo.dll
+C:\Users\Gregory\Documents\GitHub\OnlineGame\Repo\bin\Debug\Repo.pdb
+C:\Users\Gregory\Documents\GitHub\OnlineGame\Repo\obj\Debug\Repo.csprojResolveAssemblyReference.cache
+C:\Users\Gregory\Documents\GitHub\OnlineGame\Repo\obj\Debug\Repo.csproj.CoreCompileInputs.cache
+C:\Users\Gregory\Documents\GitHub\OnlineGame\Repo\obj\Debug\Repo.dll
+C:\Users\Gregory\Documents\GitHub\OnlineGame\Repo\obj\Debug\Repo.pdb

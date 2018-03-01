@@ -12,7 +12,7 @@ namespace Repo.Repository
     public abstract class BaseRepository<TKey, TEntities> : IRepository<TKey, TEntities> where TEntities : IEntities<TKey>
     {
         public string TableName { get; set; }
-        private const string CONNECTION_STRING = @"Server=DESKTOP-R365B56\TFTIC;Database=OnlineGame;Trusted_Connection=True;";
+        private const string CONNECTION_STRING = @"Server=GREG-WORK;Database=OnlineGame;Trusted_Connection=True;";
         public Connection Connection { get; set; }
 
         public BaseRepository(string tableName)

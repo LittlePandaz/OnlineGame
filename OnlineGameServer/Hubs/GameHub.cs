@@ -9,9 +9,14 @@ namespace OnlineGameServer.Hubs
 {
     public class GameHub : Hub
     {
-        public void Pub(PlayerModel player)
+
+        private static readonly List<PlayerModel> Players = new List<PlayerModel> { };
+        public void Enter(PlayerModel player)
         {
-            Clients.All.Test(player.Nickname);
+
+            Players.Add(player);
+            Clients.All.Test(Players);
+            
         }
     }
 }
